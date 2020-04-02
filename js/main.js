@@ -63,18 +63,34 @@ console.log(scelta);
 var userNumber = parseInt(prompt('Scegli un numero da 1 a 5'));
 console.log(userNumber);
 
-// DICHIARO LA VARIABILE DEL PC CHE CONTERRA' IL RICHIAMO ALLA FUNZIONE CON DEFINITI I VALORI
+// DICHIARO LA VARIABILE DEL NUMBERPC CHE CONTERRA' IL RICHIAMO ALLA FUNZIONE CON DEFINITI I VALORI
 var numberPc = numeroCasuale(1, 5);
+console.log(numberPc);
+
+var somma = userNumber + numberPc;
+console.log(typeof(somma));
+
+var verifica = pariDispari(somma);
+console.log(verifica);
+
+
 
 
 // CREO LA FUNZIONE PER GENERARE UN NUMERO CASUALE DA ASSEGNARE AL PC CHE RISPETTI I VALORI DI MIN E MAX DEFINITI
 
 function numeroCasuale (min , max) {
-  var numberRandom = Math.floor(Math.random()* (max - min + 1) ) + min;
-  console.log("QUESTA E' LA STAMPA DELLA FUNZIONE " + numberRandom); 
+  var numberRandom = Math.floor(Math.random() * (max - min + 1) ) + min;
+
   return numberRandom;
 }
 
-var totSomma = userNumber.value + numberPc.value;
-console.log(totSomma);
+// CREO LA FUNZIONE CHE MI STABILISCE SE IL NUMERO E' PARI O DISPARI
+function pariDispari (numero) {
+  if (numero % 2 == 0) {
+    return 'pari';
+  }
+  return 'dispari';
+}
+
+
 
