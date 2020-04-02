@@ -64,14 +64,25 @@ var userNumber = parseInt(prompt('Scegli un numero da 1 a 5'));
 console.log(userNumber);
 
 // DICHIARO LA VARIABILE DEL NUMBERPC CHE CONTERRA' IL RICHIAMO ALLA FUNZIONE CON DEFINITI I VALORI
+
 var numberPc = numeroCasuale(1, 5);
 console.log(numberPc);
+
+// VARIBIABILE CHE CONTIENE LA SOMMA DEI DUE VALORI
 
 var somma = userNumber + numberPc;
 console.log(typeof(somma));
 
+// VERIFICA CONTIENE IL VALORE DI PARI O DISPARI
 var verifica = pariDispari(somma);
 console.log(verifica);
+
+if (verifica === scelta) {
+  console.log('Complimenti HAI VINTO');
+}else {
+    console.log('Il PC ha vinto');
+  
+}
 
 
 
